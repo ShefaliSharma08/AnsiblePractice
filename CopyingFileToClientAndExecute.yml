@@ -1,0 +1,13 @@
+---
+
+    
+ - hosts: grp1
+   become: true
+   tasks:
+    - name: copying the scripts
+      copy: src=/home/ansadmin/test1.sh dest=/home/ansadmin/test1.sh mode=777 owner=ansadmin group=sys
+
+    - name: executing the scripts
+      shell: /home/ansadmin/test1.sh
+
+      
